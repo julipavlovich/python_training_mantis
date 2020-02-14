@@ -33,8 +33,9 @@ class ProjectHelper:
         wd = self.app.wd
         self.open_project_manage_page()
         wd.find_element_by_link_text(project).click()
+        # wd.find_element_by_xpath("(//a[contains(text(),'%s')])[3]" % project).click()
         wd.find_element_by_xpath("//input[@value='Delete Project']").click()
-        # wd.find_element_by_xpath("//input[@value='Delete Project']").click()
+        wd.find_element_by_xpath("//input[@value='Delete Project']").click()
 
     project_cache = None
 
